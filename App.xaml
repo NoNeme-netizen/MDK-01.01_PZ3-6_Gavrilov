@@ -1,0 +1,62 @@
+﻿<Application x:Class="PZ3.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PZ3"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <!-- СТИЛЬ ДЛЯ ВСЕХ КНОПОК -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FF76E3B3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="8"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF4CAF50"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- СТИЛЬ ДЛЯ TEXTBLOCK НА СТРАНИЦЕ АВТОРИЗАЦИИ -->
+        <Style x:Key="AuthTextBlock" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <!-- СТИЛЬ ДЛЯ TEXTBOX НА СТРАНИЦЕ АВТОРИЗАЦИИ -->
+        <Style x:Key="AuthTextBox" TargetType="TextBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="8,4"/>
+        </Style>
+
+        <!-- СТИЛЬ ЗАГОЛОВКА -->
+        <Style x:Key="TitleTextBlock" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+    </Application.Resources>
+</Application>
