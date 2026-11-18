@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d41f7d7b0b5a4fce95ed917774366837" Name="Diagram1" ZoomLevel="40">
+        <EntityTypeShape EntityType="PhotoCenterModel.Clients" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Dealers" Width="1.5" PointX="9" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Employees" Width="1.5" PointX="6" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Genders" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Materials" Width="1.5" PointX="11.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.MaterialWriteOffs" Width="1.5" PointX="13.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.OrderItems" Width="1.5" PointX="13.5" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Orders" Width="1.5" PointX="8.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Payments" Width="1.5" PointX="16.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.PhotoSessions" Width="1.5" PointX="16.5" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Products" Width="1.5" PointX="11.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.SaleItems" Width="1.5" PointX="13.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Sales" Width="1.5" PointX="11.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Services" Width="1.5" PointX="11.25" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Statuses" Width="1.5" PointX="6" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Supplies" Width="1.5" PointX="11.25" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Units" Width="1.5" PointX="9" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.Users" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.UtilizatsiyaCompanies" Width="1.5" PointX="9" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhotoCenterModel.WasteTransfers" Width="1.5" PointX="11.25" PointY="16.875" IsExpanded="true" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Clients_Genders" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Clients_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Orders_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_PhotoSessions_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Sales_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Supplies_Dealers" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Employees_Genders" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Employees_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_MaterialWriteOffs_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Orders_AcceptedBy" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Orders_AssignedTo" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_PhotoSessions_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Sales_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Supplies_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_WasteTransfers_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Materials_Units" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_MaterialWriteOffs_Materials" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Supplies_Materials" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_MaterialWriteOffs_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_OrderItems_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_OrderItems_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Orders_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Payments_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_PhotoSessions_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Payments_Sales" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_PhotoSessions_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Products_Units" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_SaleItems_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_SaleItems_Sales" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_Services_Units" ManuallyRouted="false" />
+        <AssociationConnector Association="PhotoCenterModel.FK_WasteTransfers_Companies" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

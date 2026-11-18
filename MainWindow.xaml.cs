@@ -16,15 +16,11 @@ using PZ3.pages;
 
 namespace PZ3
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            // При запуске показываем страницу авторизации
             FrmMain.Navigate(new AuthoPage());
         }
 
@@ -34,7 +30,6 @@ namespace PZ3
                 FrmMain.GoBack();
         }
 
-        // Скрываем кнопку Назад, если возвращаться некуда
         private void FrmMain_ContentRendered(object sender, System.EventArgs e)
         {
             if (FrmMain.CanGoBack)

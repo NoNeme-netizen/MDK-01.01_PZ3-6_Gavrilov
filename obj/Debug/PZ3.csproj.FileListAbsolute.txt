@@ -19,3 +19,9 @@ C:\Users\gavri\OneDrive\Рабочий стол\ворлд\3курсVS\PZ3\obj\D
 C:\Users\gavri\OneDrive\Рабочий стол\ворлд\3курсVS\PZ3\obj\Debug\PZ3.exe
 C:\Users\gavri\OneDrive\Рабочий стол\ворлд\3курсVS\PZ3\obj\Debug\PZ3.pdb
 C:\Users\gavri\OneDrive\Рабочий стол\ворлд\3курсVS\PZ3\obj\Debug\PZ3.exe.config
+C:\Users\gavri\OneDrive\Рабочий стол\ворлд\3курсVS\PZ3\bin\Debug\EntityFramework.dll
+C:\Users\gavri\OneDrive\Рабочий стол\ворлд\3курсVS\PZ3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gavri\OneDrive\Рабочий стол\ворлд\3курсVS\PZ3\bin\Debug\EntityFramework.xml
+C:\Users\gavri\OneDrive\Рабочий стол\ворлд\3курсVS\PZ3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gavri\OneDrive\Рабочий стол\ворлд\3курсVS\PZ3\obj\Debug\PZ3_Content.g.cs
+C:\Users\gavri\OneDrive\Рабочий стол\ворлд\3курсVS\PZ3\obj\Debug\PZ3.csproj.Up2Date

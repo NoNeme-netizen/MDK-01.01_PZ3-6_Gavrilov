@@ -8,7 +8,6 @@ namespace PZ3.Services
         private static readonly Random random = new Random();
         private const string Characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-        // генерирует случайный текст капчи заданной длины
         public static string GenerateCaptchaText(int length)
         {
             if (length <= 0)

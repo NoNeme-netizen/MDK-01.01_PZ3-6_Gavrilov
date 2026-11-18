@@ -9,7 +9,7 @@ namespace PZ3.pages
 {
     public partial class AuthoPage : Page
     {
-        private int failedAttempts;              // сколько раз неудачно пытались войти
+        private int failedAttempts;              // неудачно пытались
         private AuthService authService = new AuthService();
 
         public AuthoPage()
@@ -17,13 +17,11 @@ namespace PZ3.pages
             InitializeComponent();
         }
 
-        // Вход гостем — страница клиента без пользователя
         private void btnEnterGuests_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ClientPage(null, "Гость"));
         }
 
-        // Вход по логину и паролю
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string login = txtLogin.Text.Trim();
@@ -37,7 +35,6 @@ namespace PZ3.pages
 
             failedAttempts = failedAttempts + 1;
 
-            // со второй попытки нужна капча
             if (failedAttempts > 1 && txtCaptcha.Text.Trim() != tblCaptcha.Text)
             {
                 MessageBox.Show("Неверно введена капча!");
@@ -51,7 +48,7 @@ namespace PZ3.pages
             {
                 MessageBox.Show("Вы ввели логин или пароль неверно!");
                 txtPassword.Password = "";
-                GenerateCaptcha();     // показываем капчу
+                GenerateCaptcha();     
                 return;
             }
 
@@ -59,8 +56,6 @@ namespace PZ3.pages
             MessageBox.Show("Вы вошли как: " + user.Login + " (" + user.Role + ")");
             OpenPageForRole(user);
         }
-
-        // Переход на страницу в зависимости от роли
         private void OpenPageForRole(AuthorizedUser user)
         {
             switch (user.Role)
@@ -76,7 +71,6 @@ namespace PZ3.pages
             }
         }
 
-        // Генерация новой капчи
         private void GenerateCaptcha()
         {
             tblCaptcha.Visibility = Visibility.Visible;

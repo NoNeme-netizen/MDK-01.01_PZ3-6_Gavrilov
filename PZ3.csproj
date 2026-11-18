@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.5.2\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.5.2\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,6 +15,8 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,10 +38,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.5.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.5.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -57,6 +69,102 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Clients.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dealers.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employees.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Genders.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Materials.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MaterialWriteOffs.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderItems.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Orders.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Payments.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PhotoCenterModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhotoCenterModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PhotoCenterModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PhotoCenterModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhotoCenterModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PhotoSessions.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Products.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SaleItems.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sales.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Services.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Authenticate_Result.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_OrdersForPeriod_Result.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ServiceRevenueForPeriod_Result.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SummaryForPeriod_Result.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Statuses.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Supplies.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Units.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Users.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UtilizatsiyaCompanies.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WasteTransfers.cs">
+      <DependentUpon>PhotoCenterModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\CaptchaGenerator.cs" />
     <Compile Include="Services\Hash.cs" />
@@ -106,6 +214,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Models\PhotoCenterModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PhotoCenterModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\PhotoCenterModel.edmx.diagram">
+      <DependentUpon>PhotoCenterModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,12 +230,34 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Models\PhotoCenterModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PhotoCenterModel.Context.cs</LastGenOutput>
+      <DependentUpon>PhotoCenterModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\PhotoCenterModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PhotoCenterModel.edmx</DependentUpon>
+      <LastGenOutput>PhotoCenterModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.5.2\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.2\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.5.2\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.5.2\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.5.2\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.5.2\build\EntityFramework.targets')" />
 </Project>

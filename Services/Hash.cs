@@ -17,7 +17,6 @@ namespace PZ3.Services
             }
         }
 
-        // хэш с солью — так пароль хранится в базе PhotoCenter (Salt + Password)
         public static string HashPassword(string salt, string password)
         {
             return HashPassword(salt + password);
